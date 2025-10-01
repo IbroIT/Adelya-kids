@@ -1,0 +1,240 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const EpicFAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const faqItems = [
+    {
+      question: "Сколько дней длится доставка?",
+      answer: "Доставка занимает от 3 до 7 рабочих дней в зависимости от вашего региона. Экспресс-доставка доступна за дополнительную плату - 1-2 дня.",
+      icon: "🚚",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      question: "Как производится оплата?",
+      answer: "Оплата происходит после подтверждения заказа и проверки товара. Мы выставляем счет с полной детализацией заказа.",
+      icon: "💳",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      question: "Какие есть способы оплаты?",
+      answer: "Мы принимаем банковские карты (Visa, MasterCard, МИР), банковские переводы, электронные кошельки (ЮMoney, Qiwi) и наличные при самовывозе.",
+      icon: "💰",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      question: "Где посмотреть ассортимент?",
+      answer: "Полный каталог товаров доступен в нашем мобильном приложении, на сайте в разделе 'Каталог', а также мы можем отправить вам актуальный прайс-лист по запросу.",
+      icon: "📱",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      question: "Где вы находитесь?",
+      answer: "Наш главный офис и шоурум расположены по адресу: Москва, ул. Тверская, д. 10. Также есть пункты выдачи в 25 городах России.",
+      icon: "📍",
+      color: "from-red-500 to-rose-500"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const answerVariants = {
+    hidden: { 
+      opacity: 0, 
+      height: 0,
+      transition: {
+        duration: 0.3
+      }
+    },
+    visible: { 
+      opacity: 1, 
+      height: "auto",
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        
+        {/* Заголовок секции */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+              «Сколько дней длится доставка?»
+            </span>
+          </h2>
+          <p className="text-xl lg:text-2xl text-gray-600 font-medium">
+            Ответили на этот и другие часто задаваемые вопросы
+          </p>
+          
+          {/* Декоративный элемент */}
+          <div className="mt-8 flex justify-center">
+            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full"></div>
+          </div>
+        </motion.div>
+
+        {/* FAQ Аккордеон */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
+          {faqItems.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
+                activeIndex === index 
+                  ? 'border-green-300 shadow-2xl scale-105' 
+                  : 'border-gray-200 hover:border-green-200'
+              }`}
+            >
+              {/* Вопрос */}
+              <button
+                onClick={() => setActiveIndex(activeIndex === index ? -1 : index)}
+                className="w-full px-6 py-6 text-left flex items-center justify-between group"
+              >
+                <div className="flex items-center space-x-4">
+                  {/* Иконка */}
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-lg shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
+                    {item.icon}
+                  </div>
+                  
+                  {/* Текст вопроса */}
+                  <div className="flex-1">
+                    <h3 className={`text-lg lg:text-xl font-bold transition-colors duration-300 ${
+                      activeIndex === index ? 'text-green-700' : 'text-gray-800 group-hover:text-green-600'
+                    }`}>
+                      {item.question}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Иконка плюс/минус */}
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center text-white transition-all duration-500 transform ${
+                  activeIndex === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                }`}>
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-500 ${
+                      activeIndex === index ? 'rotate-45' : 'rotate-0'
+                    }`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Ответ */}
+              <AnimatePresence>
+                {activeIndex === index && (
+                  <motion.div
+                    variants={answerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6">
+                      <div className="pl-16 border-l-2 border-green-300">
+                        <p className="text-gray-600 text-lg leading-relaxed">
+                          {item.answer}
+                        </p>
+                        
+                        {/* Дополнительные детали */}
+                        {index === 0 && (
+                          <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                            <p className="text-sm text-green-700 font-medium">
+                              💡 <strong>Совет:</strong> Для ускорения доставки рекомендуем указывать полный адрес с индексом
+                            </p>
+                          </div>
+                        )}
+                        
+                        {index === 2 && (
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">💳 Банковские карты</span>
+                            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">🏦 Переводы</span>
+                            <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">📱 Электронные кошельки</span>
+                            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">💵 Наличные</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA Блок */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-green-500 to-green-700 rounded-3xl p-8 shadow-2xl">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              Не нашли ответ на свой вопрос?
+            </h3>
+            <p className="text-green-100 text-lg mb-6">
+              Наша команда поддержки готова помочь вам 24/7
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-green-700 px-8 py-3 rounded-2xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                📞 Позвонить нам
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold hover:bg-white hover:text-green-700 transform hover:scale-105 transition-all duration-300">
+                💬 Написать в чат
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Декор элементы */}
+        <div className="fixed top-1/4 left-5 w-4 h-4 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
+        <div className="fixed top-3/4 right-10 w-6 h-6 bg-green-300 rounded-full opacity-30 animate-bounce"></div>
+        <div className="fixed bottom-1/3 left-10 w-3 h-3 bg-green-500 rounded-full opacity-40 animate-ping"></div>
+      </div>
+    </div>
+  );
+};
+
+export default EpicFAQSection;
