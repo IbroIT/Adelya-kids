@@ -17,7 +17,7 @@ const FashionTrendPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-white to-pink-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-12">
           
@@ -28,49 +28,48 @@ const FashionTrendPage = () => {
             
             {/* Заголовок с анимацией */}
             <div className="space-y-6">
-              <div className="flex items-center gap-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <TrendingUp className="w-8 h-8 text-green-600 animate-pulse" />
+              <div className="flex items-center gap-3">
+                <TrendingUp className="w-8 h-8 text-pink-600" />
                 <span className="text-lg font-semibold text-gray-600 tracking-wide">
                   АКТУАЛЬНЫЕ ТРЕНДЫ 2024
                 </span>
               </div>
               
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
-                <span className="bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent">
                   Следим за
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent animate-pulse">
+                <span className="bg-gradient-to-r from-pink-700 to-purple-600 bg-clip-text text-transparent">
                   трендами
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent">
                   и отслеживаем
                 </span>
                 <br />
                 <span className="relative">
-                  <span className="bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-pink-700 to-purple-600 bg-clip-text text-transparent">
                     популярные модели
                   </span>
-                  <Sparkles className="absolute -top-2 -right-8 w-6 h-6 text-yellow-500 animate-spin" style={{ animationDuration: '3s' }} />
+                  <Sparkles className="absolute -top-2 -right-8 w-6 h-6 text-yellow-500" />
                 </span>
               </h1>
             </div>
 
             {/* Подзаголовок */}
-            <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light max-w-2xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light max-w-2xl">
               Каталог регулярно пополняется новыми и актуальными позициями на текущий сезон
             </p>
 
             {/* Статистика обновлений */}
-            <div className="grid grid-cols-3 gap-4 py-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="grid grid-cols-3 gap-4 py-6">
               {newArrivals.map((item, index) => (
                 <div
                   key={item.id}
                   className="text-center p-4 bg-white rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300"
-                  style={{ animationDelay: `${0.8 + index * 0.1}s` }}
                 >
-                  <div className="text-2xl font-bold text-green-600">{item.days}</div>
+                  <div className="text-2xl font-bold text-pink-600">{item.days}</div>
                   <div className="text-sm text-gray-500 mt-1">дней назад</div>
                   <div className="text-xs font-medium text-gray-700 mt-2">{item.name}</div>
                 </div>
@@ -78,11 +77,8 @@ const FashionTrendPage = () => {
             </div>
 
             {/* Кнопка CTA */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <button className="group relative bg-gray-900 hover:bg-gray-800 text-white font-bold py-5 px-10 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                
-                {/* Анимация фона кнопки */}
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div>
+              <button className="group relative bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-5 px-10 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
                 
                 <div className="relative flex items-center justify-center gap-3">
                   <span className="text-lg">Перейти в каталог</span>
@@ -96,14 +92,14 @@ const FashionTrendPage = () => {
               </button>
               
               {/* Дополнительная информация под кнопкой */}
-              <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500 animate-fade-in" style={{ animationDelay: '1s' }}>
-                <RefreshCw className="w-4 h-4 animate-spin" style={{ animationDuration: '3s' }} />
+              <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500">
+                <RefreshCw className="w-4 h-4" />
                 <span>Обновление каталога каждые 48 часов</span>
               </div>
             </div>
 
             {/* Преимущества */}
-            <div className="grid grid-cols-2 gap-4 mt-8 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <div className="grid grid-cols-2 gap-4 mt-8">
               {[
                 'Только сезонные коллекции',
                 'Прямые поставки от брендов',
@@ -111,7 +107,7 @@ const FashionTrendPage = () => {
                 'Быстрое обновление ассортимента'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center gap-2 text-gray-600">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-pink-500 rounded-full" />
                   <span className="text-sm">{benefit}</span>
                 </div>
               ))}
@@ -127,7 +123,7 @@ const FashionTrendPage = () => {
             <div className="relative">
               {/* Декоративный фон */}
               <div className="absolute -inset-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl transform rotate-2" />
-              <div className="absolute -inset-8 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl transform -rotate-1" />
+              <div className="absolute -inset-8 bg-gradient-to-br from-pink-50 to-purple-100 rounded-3xl transform -rotate-1" />
               
               {/* Контейнер изображения */}
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-700">
@@ -138,7 +134,7 @@ const FashionTrendPage = () => {
                   {/* Placeholder с анимацией загрузки */}
                   {!imageLoaded && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600" />
+                      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-pink-600" />
                     </div>
                   )}
                   
@@ -147,9 +143,9 @@ const FashionTrendPage = () => {
                     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
                       
                       {/* Обложка журнала */}
-                      <div className="bg-gray-900 text-white p-6 rounded-t-2xl">
+                      <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white p-6 rounded-t-2xl">
                         <div className="text-2xl font-bold tracking-widest">CORREY</div>
-                        <div className="text-sm text-gray-300 mt-1">Spring Collection 2024</div>
+                        <div className="text-sm text-pink-100 mt-1">Spring Collection 2024</div>
                       </div>
                       
                       {/* Содержимое журнала */}
@@ -157,8 +153,8 @@ const FashionTrendPage = () => {
                         <div className="grid grid-cols-2 gap-4">
                           {/* Левая страница - футболка */}
                           <div className="space-y-2">
-                            <div className="bg-black rounded-lg aspect-square flex items-center justify-center">
-                              <div className="w-3/4 h-3/4 bg-gray-800 rounded relative">
+                            <div className="bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg aspect-square flex items-center justify-center">
+                              <div className="w-3/4 h-3/4 bg-pink-400 rounded relative">
                                 <div className="absolute top-2 left-2 right-2 h-4 bg-white rounded" />
                               </div>
                             </div>
@@ -178,8 +174,8 @@ const FashionTrendPage = () => {
                   </div>
                   
                   {/* Декоративный медвежонок */}
-                  <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-beige-300 to-beige-400 rounded-full shadow-lg transform -rotate-12 animate-float">
-                    <div className="absolute inset-2 bg-gradient-to-br from-beige-200 to-beige-300 rounded-full">
+                  <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full shadow-lg transform -rotate-12">
+                    <div className="absolute inset-2 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full">
                       {/* Лицо медвежонка */}
                       <div className="absolute top-4 left-4 right-4 flex justify-between">
                         <div className="w-2 h-2 bg-gray-800 rounded-full" />
@@ -193,8 +189,8 @@ const FashionTrendPage = () => {
             </div>
 
             {/* Плавающие элементы */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full animate-bounce" />
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-500 rounded-full animate-pulse" />
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-pink-500 rounded-full" />
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-500 rounded-full" />
             
             {/* Текст на изображении */}
             <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform hover:scale-110 transition-all duration-300">
@@ -204,38 +200,6 @@ const FashionTrendPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Анимации */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) rotate(-12deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(-12deg);
-          }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };

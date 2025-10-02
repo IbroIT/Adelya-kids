@@ -12,7 +12,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "1 000",
       type: "фиксированная",
-      color: "from-green-400 to-emerald-500",
+      color: "from-pink-400 to-rose-500",
       popular: false,
       features: ["Базовый подбор", "Консультация", "Помощь с заказом"]
     },
@@ -21,7 +21,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "1 500",
       type: "фиксированная",
-      color: "from-emerald-400 to-green-500",
+      color: "from-rose-400 to-pink-500",
       popular: false,
       features: ["Расширенный подбор", "Приоритетная поддержка", "Анализ рынка"]
     },
@@ -30,7 +30,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "2 500",
       type: "фиксированная",
-      color: "from-green-500 to-teal-500",
+      color: "from-pink-500 to-fuchsia-500",
       popular: true,
       features: ["Персональный менеджер", "Экспресс-доставка", "Гарантия качества"]
     },
@@ -39,7 +39,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "3 500",
       type: "фиксированная",
-      color: "from-teal-500 to-cyan-500",
+      color: "from-fuchsia-500 to-purple-500",
       popular: false,
       features: ["VIP поддержка", "Выгодные условия", "Персональные скидки"]
     },
@@ -48,7 +48,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "4 500",
       type: "фиксированная",
-      color: "from-cyan-500 to-blue-500",
+      color: "from-purple-500 to-violet-500",
       popular: false,
       features: ["Премиум сервис", "Эксклюзивные поставщики", "Максимальный приоритет"]
     },
@@ -57,7 +57,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "4%",
       type: "процентная",
-      color: "from-blue-500 to-indigo-500",
+      color: "from-violet-500 to-indigo-500",
       popular: false,
       features: ["Индивидуальные условия", "Прямые контракты", "Специальные цены"]
     },
@@ -66,7 +66,7 @@ const PricingSection = () => {
       currency: "Кыргызских сомов",
       price: "3%",
       type: "процентная",
-      color: "from-indigo-500 to-purple-500",
+      color: "from-indigo-500 to-purple-600",
       popular: false,
       features: ["Оптимизация логистики", "Бесплатная доставка", "Персональные условия"]
     }
@@ -127,7 +127,7 @@ const PricingSection = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-20 -right-20 w-40 h-40 bg-green-100 rounded-full opacity-30"
+          className="absolute -top-20 -right-20 w-40 h-40 bg-pink-100 rounded-full opacity-30"
         />
         <motion.div
           animate={{
@@ -139,7 +139,7 @@ const PricingSection = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-100 rounded-full opacity-30"
+          className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-100 rounded-full opacity-30"
         />
       </div>
 
@@ -187,7 +187,7 @@ const PricingSection = () => {
                 variants={itemVariants}
                 className="flex items-center space-x-3 p-4 bg-white rounded-2xl shadow-lg border border-gray-100"
               >
-                <Calculator className="w-8 h-8 text-green-500" />
+                <Calculator className="w-8 h-8 text-pink-500" />
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg">Сумма заказа</h3>
                   <p className="text-gray-600 text-sm">Диапазон стоимости товаров</p>
@@ -199,7 +199,7 @@ const PricingSection = () => {
                 variants={itemVariants}
                 className="flex items-center space-x-3 p-4 bg-white rounded-2xl shadow-lg border border-gray-100"
               >
-                <TrendingDown className="w-8 h-8 text-blue-500" />
+                <TrendingDown className="w-8 h-8 text-purple-500" />
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg">Наша комиссия</h3>
                   <p className="text-gray-600 text-sm">Стоимость услуг</p>
@@ -296,7 +296,7 @@ const PricingSection = () => {
                           transition={{ delay: index * 0.1 + featureIndex * 0.1 }}
                           className="flex items-center space-x-2 text-sm"
                         >
-                          <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <Check className="w-4 h-4 text-pink-500 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
                         </motion.div>
                       ))}
@@ -311,7 +311,7 @@ const PricingSection = () => {
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.5 }}
-                    className="h-0.5 bg-gradient-to-r from-green-200 to-blue-200 rounded-full mx-6 mt-4 transform origin-left"
+                    className="h-0.5 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full mx-6 mt-4 transform origin-left"
                   />
                 )}
               </motion.div>
@@ -324,7 +324,7 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-8 border border-green-200"
+          className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 border border-pink-200"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -339,13 +339,13 @@ const PricingSection = () => {
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                <div className="flex justify-between items-center p-3 bg-pink-50 rounded-lg">
                   <span className="text-gray-700">Малые заказы</span>
-                  <span className="font-bold text-green-600">Фиксированная ставка</span>
+                  <span className="font-bold text-pink-600">Фиксированная ставка</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
                   <span className="text-gray-700">Крупные заказы</span>
-                  <span className="font-bold text-blue-600">Сниженный процент</span>
+                  <span className="font-bold text-purple-600">Сниженный процент</span>
                 </div>
                 <div className="text-center text-sm text-gray-600 mt-4">
                   📈 Экономия до 25% при заказах от 300 000 KGS
@@ -365,10 +365,10 @@ const PricingSection = () => {
           <motion.button
             whileHover={{ 
               scale: 1.05,
-              boxShadow: "0 20px 40px -10px rgba(16, 185, 129, 0.5)"
+              boxShadow: "0 20px 40px -10px rgba(236, 72, 153, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all duration-300 shadow-lg"
+            className="bg-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-pink-600 transition-all duration-300 shadow-lg"
           >
             Рассчитать стоимость моего заказа
           </motion.button>

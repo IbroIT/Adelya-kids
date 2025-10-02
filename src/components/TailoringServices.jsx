@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 import sewingMachine from '/src/assets/sewing-machine-svgrepo-com.svg';
 
-
 const TailoringServices = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +44,7 @@ const TailoringServices = () => {
       title: "Создание тестового образца",
       description: "Шьём пробный образец и отправляем на утверждение",
       details: "Проверяем посадку, качество материалов и соответствие техническим требованиям",
-      color: "from-green-400 to-emerald-500"
+      color: "from-pink-400 to-purple-500"
     },
     {
       id: 4,
@@ -61,7 +60,7 @@ const TailoringServices = () => {
       title: "Пошив партии",
       description: "Отшиваем всю партию на основе утверждённого образца",
       details: "Современное оборудование и контроль качества на каждом этапе производства",
-      color: "from-red-400 to-rose-500"
+      color: "from-pink-500 to-rose-500"
     },
     {
       id: 6,
@@ -80,7 +79,7 @@ const TailoringServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-white to-pink-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Заголовок и вводная информация */}
@@ -90,27 +89,26 @@ const TailoringServices = () => {
           }`}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
               Предоставляем услуги по{' '}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
                 оптовому пошиву одежды
               </span>
             </h2>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
               <div className="flex items-center gap-3 text-lg text-gray-600">
-                <CheckCircle className="w-6 h-6 text-green-500" />
+                <CheckCircle className="w-6 h-6 text-pink-500" />
                 Отшиваем детскую, мужскую и женскую одежду
               </div>
               
               <div className="relative">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-3 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300">
                   Минимальная партия — от 500 шт.
                 </div>
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-ping" />
               </div>
             </div>
 
             {/* Кнопка CTA */}
-            <button className="group bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-12 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12">
+            <button className="group bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12">
               <div className="flex items-center gap-3">
                 <span className="text-lg">Заказать пошив</span>
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -127,8 +125,8 @@ const TailoringServices = () => {
               className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-100 rounded-xl">
-                  <feature.icon className="w-6 h-6 text-green-600" />
+                <div className="p-3 bg-pink-100 rounded-xl">
+                  <feature.icon className="w-6 h-6 text-pink-600" />
                 </div>
                 <span className="text-gray-700 font-medium">{feature.text}</span>
               </div>
@@ -139,7 +137,7 @@ const TailoringServices = () => {
         {/* Пошаговый процесс работы */}
         <div className="relative">
           {/* Декоративная линия процесса */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-green-200 to-emerald-200 transform -translate-x-1/2 hidden lg:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-200 to-purple-200 transform -translate-x-1/2 hidden lg:block" />
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
             {steps.map((step, index) => (
@@ -148,15 +146,15 @@ const TailoringServices = () => {
                 className={`relative group cursor-pointer transition-all duration-500 ${
                   isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onMouseEnter={() => setActiveStep(index)}
                 onClick={() => setActiveStep(index)}
               >
                 <div
                   className={`h-full bg-white rounded-3xl p-8 shadow-xl border-2 transition-all duration-300 ${
                     activeStep === index
-                      ? 'border-green-500 shadow-2xl scale-105'
-                      : 'border-green-200 hover:border-green-300'
+                      ? 'border-pink-500 shadow-2xl scale-105'
+                      : 'border-pink-200 hover:border-pink-300'
                   }`}
                 >
                   
@@ -168,13 +166,12 @@ const TailoringServices = () => {
                   {/* Иконка */}
                   <div className="mb-6 pt-4">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center shadow-lg`}>
-                    {typeof step.icon === "string" ? (
+                      {typeof step.icon === "string" ? (
                         <img src={step.icon} alt={step.title} className="w-8 h-8" />
-                    ) : (
+                      ) : (
                         <step.icon className="w-8 h-8 text-white" />
-                    )}
+                      )}
                     </div>
-
                   </div>
 
                   {/* Заголовок и описание */}
@@ -204,7 +201,7 @@ const TailoringServices = () => {
                 {/* Соединительные линии для мобильной версии */}
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center my-4">
-                    <div className="w-1 h-8 bg-gradient-to-b from-green-200 to-emerald-200" />
+                    <div className="w-1 h-8 bg-gradient-to-b from-pink-200 to-purple-200" />
                   </div>
                 )}
               </div>
@@ -213,7 +210,7 @@ const TailoringServices = () => {
         </div>
 
         {/* Дополнительная информация */}
-        <div className="mt-16 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 shadow-lg">
+        <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -228,7 +225,7 @@ const TailoringServices = () => {
                   "Конфиденциальность и защита ваших идей"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -244,7 +241,7 @@ const TailoringServices = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Тип одежды
                   </label>
-                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent">
                     <option>Детская одежда</option>
                     <option>Мужская одежда</option>
                     <option>Женская одежда</option>
@@ -258,10 +255,10 @@ const TailoringServices = () => {
                     type="number" 
                     min="500"
                     defaultValue="500"
-                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                   />
                 </div>
-                <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
                   Получить расчёт
                 </button>
               </div>
@@ -271,37 +268,19 @@ const TailoringServices = () => {
 
         {/* Финальный CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gray-900 rounded-3xl p-12 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12 text-white shadow-2xl">
             <h3 className="text-3xl font-bold mb-4">
               Готовы начать сотрудничество?
             </h3>
-            <p className="text-gray-300 mb-8 text-lg">
+            <p className="text-pink-100 mb-8 text-lg">
               Оставьте заявку и получите бесплатную консультацию нашего специалиста
             </p>
-            <button className="bg-green-500 hover:bg-green-400 text-gray-900 font-bold py-4 px-12 rounded-2xl transform hover:scale-105 transition-all duration-300">
+            <button className="bg-white hover:bg-gray-100 text-pink-600 font-bold py-4 px-12 rounded-2xl transform hover:scale-105 transition-all duration-300">
               Обсудить проект
             </button>
           </div>
         </div>
       </div>
-
-      {/* Анимации */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.6s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };

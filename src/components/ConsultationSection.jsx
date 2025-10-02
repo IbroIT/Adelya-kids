@@ -92,7 +92,7 @@ const ConsultationSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-green-500 to-emerald-600 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-pink-500 to-rose-600 relative overflow-hidden">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Органические линии */}
@@ -234,7 +234,7 @@ const ConsultationSection = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                          className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
                           placeholder="Введите ваше имя"
                         />
                       </div>
@@ -256,7 +256,7 @@ const ConsultationSection = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                          className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
                           placeholder="+996 ___ ___ ___"
                         />
                       </div>
@@ -278,7 +278,7 @@ const ConsultationSection = () => {
                         value={formData.message}
                         onChange={handleChange}
                         rows="4"
-                        className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none"
+                        className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 resize-none"
                         placeholder="Интересующий товар, количество, стиль, бюджет..."
                       />
                     </div>
@@ -293,12 +293,12 @@ const ConsultationSection = () => {
                       <input
                         type="checkbox"
                         required
-                        className="w-4 h-4 text-green-500 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2"
+                        className="w-4 h-4 text-pink-500 bg-gray-100 border-gray-300 rounded focus:ring-pink-500 focus:ring-2"
                       />
                     </div>
                     <label className="text-sm text-gray-600">
                       Я соглашаюсь с условиями обработки данных и{' '}
-                      <a href="#" className="text-green-500 hover:text-green-600 underline">
+                      <a href="#" className="text-pink-500 hover:text-pink-600 underline">
                         политикой конфиденциальности
                       </a>
                     </label>
@@ -309,12 +309,12 @@ const ConsultationSection = () => {
                     variants={itemVariants}
                     whileHover={{ 
                       scale: 1.02,
-                      boxShadow: "0 10px 30px -10px rgba(16, 185, 129, 0.5)"
+                      boxShadow: "0 10px 30px -10px rgba(236, 72, 153, 0.5)"
                     }}
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-green-500 text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center space-x-3"
+                    className="w-full bg-pink-500 text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-pink-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center space-x-3"
                   >
                     {isSubmitting ? (
                       <>
@@ -358,9 +358,9 @@ const ConsultationSection = () => {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring" }}
-                    className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                    className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6"
                   >
-                    <CheckCircle className="w-10 h-10 text-green-500" />
+                    <CheckCircle className="w-10 h-10 text-pink-500" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Заявка отправлена!
@@ -375,7 +375,7 @@ const ConsultationSection = () => {
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ delay: 0.5, duration: 5 }}
-                    className="h-1 bg-green-500 rounded-full mt-6"
+                    className="h-1 bg-pink-500 rounded-full mt-6"
                   />
                 </motion.div>
               )}

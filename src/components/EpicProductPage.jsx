@@ -72,7 +72,7 @@ const EpicProductPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Заголовок страницы */}
@@ -81,20 +81,20 @@ const EpicProductPage = () => {
         }`}>
           <h1 className="text-4xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
             Вы получите нужный вам товар<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
               в необходимом количестве
             </span>
           </h1>
           
           {/* Подзаголовок */}
           <div className="inline-block relative">
-            <p className="text-lg lg:text-xl text-green-600 font-medium mb-2">
+            <p className="text-lg lg:text-xl text-pink-600 font-medium mb-2">
               На рынке есть много продавцов, которые могут отправить не тот товар
             </p>
-            <p className="text-lg lg:text-xl text-green-600 font-semibold">
+            <p className="text-lg lg:text-xl text-pink-600 font-semibold">
               И вот как мы это решаем
             </p>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-green-500 transform scale-x-0 transition-transform duration-500 delay-300 rounded-full animate-underline"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-pink-500 transform scale-x-0 transition-transform duration-500 delay-300 rounded-full animate-underline"></div>
           </div>
         </div>
 
@@ -107,8 +107,8 @@ const EpicProductPage = () => {
                 key={step.id}
                 className={`relative p-6 rounded-2xl border-2 transition-all duration-500 transform hover:scale-105 cursor-pointer ${
                   activeStep === index
-                    ? 'border-green-500 bg-white shadow-2xl shadow-green-100'
-                    : 'border-green-200 bg-white/80 shadow-lg'
+                    ? 'border-pink-500 bg-white shadow-2xl shadow-pink-100'
+                    : 'border-pink-200 bg-white/80 shadow-lg'
                 } ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveStep(index)}
@@ -117,15 +117,15 @@ const EpicProductPage = () => {
                 {/* Номер шага с анимацией */}
                 <div className={`absolute -left-4 -top-4 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg transition-all duration-300 ${
                   activeStep === index
-                    ? 'bg-gradient-to-r from-green-500 to-green-700 scale-110 shadow-lg'
-                    : 'bg-green-400'
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 scale-110 shadow-lg'
+                    : 'bg-pink-400'
                 }`}>
                   {step.icon}
                 </div>
                 
                 <div className="ml-8">
                   <h3 className={`text-xl font-bold mb-2 transition-colors duration-300 ${
-                    activeStep === index ? 'text-green-700' : 'text-gray-800'
+                    activeStep === index ? 'text-pink-700' : 'text-gray-800'
                   }`}>
                     {step.title}
                   </h3>
@@ -136,7 +136,7 @@ const EpicProductPage = () => {
 
                 {/* Индикатор прогресса */}
                 {activeStep === index && (
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-pulse"></div>
                 )}
               </div>
             ))}
@@ -144,7 +144,7 @@ const EpicProductPage = () => {
 
           {/* Правая колонка - Визуальная часть */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <div className="bg-gradient-to-br from-pink-400 to-purple-600 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-500">
               
               {/* Декоративные элементы */}
               <div className="absolute top-4 right-4 w-20 h-20 border-2 border-white/30 rounded-full animate-ping"></div>
@@ -201,15 +201,15 @@ const EpicProductPage = () => {
                 onClick={() => setActiveStep(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   activeStep === index
-                    ? 'bg-green-500 scale-125'
-                    : 'bg-green-200 hover:bg-green-300'
+                    ? 'bg-pink-500 scale-125'
+                    : 'bg-pink-200 hover:bg-pink-300'
                 }`}
               />
             ))}
           </div>
-          <div className="w-full bg-green-200 rounded-full h-2">
+          <div className="w-full bg-pink-200 rounded-full h-2">
             <div
-              className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full transition-all duration-500 ease-out"
+              className="bg-gradient-to-r from-pink-400 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
               style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
             ></div>
           </div>

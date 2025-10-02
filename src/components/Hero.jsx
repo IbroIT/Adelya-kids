@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Scissors, Shirt, Star } from 'lucide-react';
@@ -43,20 +42,20 @@ const Hero = () => {
       icon: Scissors,
       title: "Услуги оптового пошива одежды",
       description: "Профессиональный пошив детской одежды большими партиями",
-      color: "from-green-400 to-blue-500",
+      color: "from-pink-400 to-purple-500",
       delay: 0.8
     },
     {
       icon: Shirt,
       title: "Качественные материалы",
       description: "Используем только лучшие ткани и фурнитуру",
-      color: "from-blue-400 to-purple-500",
+      color: "from-purple-400 to-pink-500",
       delay: 1.0
     }
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-white via-green-50 to-blue-50 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-purple-50 relative overflow-hidden">
       {/* Анимированный фон */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -69,7 +68,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-1/2 -right-1/4 w-1/2 h-1/2 bg-gradient-to-r from-green-200 to-transparent rounded-full opacity-20 blur-xl"
+          className="absolute -top-1/2 -right-1/4 w-1/2 h-1/2 bg-gradient-to-r from-pink-200 to-transparent rounded-full opacity-20 blur-xl"
         />
         <motion.div
           animate={{
@@ -81,38 +80,38 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-1/2 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-blue-200 to-transparent rounded-full opacity-20 blur-xl"
+          className="absolute -bottom-1/2 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-purple-200 to-transparent rounded-full opacity-20 blur-xl"
         />
       </div>
 
-      <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-4 pt-20 md:pt-32 pb-16 md:pb-20 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           {/* Текстовая часть */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
             <motion.div
               variants={itemVariants}
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
             >
               {/* Бейдж */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full"
+                className="inline-flex items-center space-x-2 bg-pink-100 text-pink-800 px-4 py-2 rounded-full"
               >
                 <Star className="w-4 h-4 fill-current" />
-                <span className="font-semibold">Лидер рынка с 2016 года</span>
+                <span className="font-semibold text-sm md:text-base">Лидер рынка с 2016 года</span>
               </motion.div>
 
               {/* Заголовок */}
               <motion.h1
                 variants={itemVariants}
-                className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
               >
                 Более 7 лет занимаемся{' '}
                 <motion.span
@@ -123,7 +122,7 @@ const Hero = () => {
                     ease: "easeInOut",
                     delay: 0.7
                   }}
-                  className="bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent bg-[length:200%_auto]"
+                  className="bg-gradient-to-r from-black to-gray-800 bg-clip-text text-transparent bg-[length:200%_auto]"
                 >
                   оптовым закупом
                 </motion.span>{' '}
@@ -133,7 +132,7 @@ const Hero = () => {
               {/* Описание */}
               <motion.p
                 variants={itemVariants}
-                className="text-xl text-gray-600 leading-relaxed"
+                className="text-lg md:text-xl text-gray-600 leading-relaxed"
               >
                 Профессиональная байерская компания, предоставляющая полный цикл услуг 
                 от проектирования до поставки качественной детской одежды оптом
@@ -143,24 +142,24 @@ const Hero = () => {
             {/* CTA Кнопки */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 md:gap-4"
             >
               <motion.button
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 10px 30px -10px rgba(16, 185, 129, 0.5)"
+                  boxShadow: "0 10px 30px -10px rgba(236, 72, 153, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 hover:bg-green-600 transition-colors"
+                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg flex items-center justify-center space-x-2 transition-colors"
               >
                 <span>Начать сотрудничество</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </motion.button>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-green-500 hover:text-green-600 transition-colors"
+                className="border-2 border-gray-300 text-gray-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:border-pink-500 hover:text-pink-600 transition-colors"
               >
                 Смотреть каталог
               </motion.button>
@@ -169,7 +168,7 @@ const Hero = () => {
             {/* Статистика */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-3 gap-8 pt-8"
+              className="grid grid-cols-3 gap-4 md:gap-8 pt-6 md:pt-8"
             >
               {[
                 { number: '7+', text: 'Лет опыта' },
@@ -183,15 +182,15 @@ const Hero = () => {
                   transition={{ delay: 1.2 + index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-2xl font-bold text-green-600">{stat.number}</div>
-                  <div className="text-gray-600 text-sm">{stat.text}</div>
+                  <div className="text-xl md:text-2xl font-bold text-pink-600">{stat.number}</div>
+                  <div className="text-gray-600 text-xs md:text-sm mt-1">{stat.text}</div>
                 </motion.div>
               ))}
             </motion.div>
           </div>
 
           {/* Изображение и карточки */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
             {/* Основное изображение */}
             <motion.div
               variants={floatingVariants}
@@ -203,15 +202,15 @@ const Hero = () => {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.8 }}
-                  className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl shadow-2xl overflow-hidden"
+                  className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gradient-to-br from-pink-100 to-purple-100 rounded-3xl shadow-2xl overflow-hidden"
                 >
-                  {/* Заглушка для изображения - в реальном проекте заменить на <img> */}
+                  {/* Заглушка для изображения */}
                   <div className="w-full h-full flex items-center justify-center text-gray-400">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl">👧</span>
+                      <div className="w-20 h-20 md:w-32 md:h-32 bg-pink-200 rounded-full mx-auto mb-3 md:mb-4 flex items-center justify-center">
+                        <span className="text-2xl md:text-4xl">👧</span>
                       </div>
-                      <p>Фото девочки в стильной одежде</p>
+                      <p className="text-sm md:text-base">Фото девочки в стильной одежде</p>
                     </div>
                   </div>
                 </motion.div>
@@ -227,7 +226,7 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -top-4 -right-4 w-24 h-24 bg-green-300 rounded-full opacity-20 blur-xl"
+                  className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 bg-pink-300 rounded-full opacity-20 blur-xl"
                 />
                 <motion.div
                   animate={{
@@ -239,12 +238,12 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-300 rounded-full opacity-20 blur-xl"
+                  className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-20 h-20 md:w-32 md:h-32 bg-purple-300 rounded-full opacity-20 blur-xl"
                 />
               </div>
             </motion.div>
 
-            {/* Плавающие карточки */}
+            {/* Плавающие карточки - скрыты на мобильных, видны на планшетах и десктопе */}
             {cards.map((card, index) => (
               <motion.div
                 key={card.title}
@@ -259,21 +258,40 @@ const Hero = () => {
                   scale: 1.05,
                   y: -5
                 }}
-                className={`absolute ${
-                  index === 0 ? 'left-0 bottom-20' : 'right-0 top-20'
-                } bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20 max-w-xs`}
+                className={`hidden md:absolute ${
+                  index === 0 ? 'left-0 bottom-8 lg:bottom-20' : 'right-0 top-8 lg:top-20'
+                } bg-white/80 backdrop-blur-md rounded-2xl p-4 lg:p-6 shadow-2xl border border-white/20 max-w-xs`}
               >
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
-                  className={`w-12 h-12 bg-gradient-to-r ${card.color} rounded-xl flex items-center justify-center mb-4`}
+                  className={`w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r ${card.color} rounded-xl flex items-center justify-center mb-3 lg:mb-4`}
                 >
-                  <card.icon className="w-6 h-6 text-white" />
+                  <card.icon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                 </motion.div>
-                <h3 className="font-bold text-gray-800 mb-2">{card.title}</h3>
-                <p className="text-gray-600 text-sm">{card.description}</p>
+                <h3 className="font-bold text-gray-800 text-sm lg:text-base mb-2">{card.title}</h3>
+                <p className="text-gray-600 text-xs lg:text-sm">{card.description}</p>
               </motion.div>
             ))}
+
+            {/* Карточки для мобильных - отображаются под изображением */}
+            <div className="md:hidden grid gap-4 mt-6">
+              {cards.map((card, index) => (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.0 + index * 0.1 }}
+                  className="bg-white/80 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/20"
+                >
+                  <div className={`w-10 h-10 bg-gradient-to-r ${card.color} rounded-xl flex items-center justify-center mb-3`}>
+                    <card.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-800 text-sm mb-2">{card.title}</h3>
+                  <p className="text-gray-600 text-xs">{card.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
@@ -283,7 +301,7 @@ const Hero = () => {
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
-          className="w-full h-12 text-white"
+          className="w-full h-8 md:h-12 text-white"
         >
           <path 
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 

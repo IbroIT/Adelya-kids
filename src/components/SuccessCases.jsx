@@ -90,7 +90,7 @@ const SuccessCases = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-green-500 to-emerald-600 relative overflow-hidden">
+    <section className="py-16 md:py-20 relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Пузырьки фона */}
@@ -104,7 +104,7 @@ const SuccessCases = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/10 rounded-full blur-xl"
+          className="absolute top-1/4 left-1/4 w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -117,7 +117,7 @@ const SuccessCases = () => {
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute bottom-1/3 right-1/3 w-40 h-40 bg-white/5 rounded-full blur-2xl"
+          className="absolute bottom-1/3 right-1/3 w-32 h-32 md:w-40 md:h-40 bg-white/5 rounded-full blur-2xl"
         />
         
         {/* Градиентные пятна */}
@@ -131,7 +131,7 @@ const SuccessCases = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-32 -left-32 w-64 h-64 bg-emerald-400/20 rounded-full"
+          className="absolute -top-24 -left-24 w-48 h-48 md:w-64 md:h-64 bg-pink-400/20 rounded-full"
         />
       </div>
 
@@ -140,19 +140,19 @@ const SuccessCases = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           {/* Левая часть - Текст */}
-          <div className="text-white">
+          <div className="text-black order-2 lg:order-1">
             {/* Заголовок с декоративным элементом */}
             <motion.div
               variants={itemVariants}
-              className="mb-8"
+              className="mb-6 md:mb-8"
             >
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-3 md:space-x-4">
                 <motion.h1
-                  className="text-4xl lg:text-6xl font-bold leading-tight"
+                  className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -169,7 +169,7 @@ const SuccessCases = () => {
                       ease: "easeInOut",
                       delay: 0.3
                     }}
-                    className="bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent bg-[length:200%_auto]"
+                    className="bg-gradient-to-r from-black to-gray-400 bg-clip-text text-transparent bg-[length:200%_auto]"
                   >
                     более 3000 клиентам
                   </motion.span>
@@ -185,10 +185,10 @@ const SuccessCases = () => {
                     type: "spring",
                     stiffness: 200
                   }}
-                  className="flex flex-col space-y-2 mt-4"
+                  className="flex flex-col space-y-1 md:space-y-2 mt-2 md:mt-4"
                 >
-                  <div className="w-2 h-8 bg-white/80 rotate-45 rounded-full" />
-                  <div className="w-2 h-6 bg-white/60 -rotate-45 rounded-full ml-2" />
+                  <div className="w-1.5 h-6 md:w-2 md:h-8 bg-white/80 rotate-45 rounded-full" />
+                  <div className="w-1.5 h-4 md:w-2 md:h-6 bg-white/60 -rotate-45 rounded-full ml-1 md:ml-2" />
                 </motion.div>
               </div>
             </motion.div>
@@ -196,14 +196,14 @@ const SuccessCases = () => {
             {/* Подзаголовок */}
             <motion.div
               variants={itemVariants}
-              className="mb-12"
+              className="mb-8 md:mb-12"
             >
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="text-xl lg:text-2xl text-white/90 leading-relaxed font-light max-w-2xl"
+                className="text-lg md:text-xl lg:text-2xl text-black/90 leading-relaxed font-light max-w-2xl"
               >
                 Мы понимаем, что для вас важно заработать с продажи товара,
                 поэтому внимательно относимся к его подбору
@@ -213,7 +213,7 @@ const SuccessCases = () => {
             {/* Статистика */}
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+              className="grid grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -224,7 +224,7 @@ const SuccessCases = () => {
                     scale: 1.05,
                     y: -5
                   }}
-                  className="text-center p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+                  className="text-center p-3 md:p-4 rounded-xl md:rounded-2xl bg-pink-500 backdrop-blur-sm border border-pink-800/20 hover:bg-pink-400 transition-all duration-300"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -235,16 +235,16 @@ const SuccessCases = () => {
                       type: "spring",
                       stiffness: 200
                     }}
-                    className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3"
+                    className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3"
                   >
-                    <stat.icon className="w-6 h-6 text-white" />
+                    <stat.icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: stat.delay + 0.2 }}
-                    className="text-2xl font-bold text-white mb-1"
+                    className="text-xl md:text-2xl font-bold text-white mb-1"
                   >
                     {stat.number}
                   </motion.div>
@@ -253,7 +253,7 @@ const SuccessCases = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: stat.delay + 0.3 }}
-                    className="text-white/80 text-sm"
+                    className="text-white/80 text-xs md:text-sm"
                   >
                     {stat.text}
                   </motion.div>
@@ -268,20 +268,20 @@ const SuccessCases = () => {
               <motion.button
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px -10px rgba(255, 255, 255, 0.3)"
+                  boxShadow: "0 10px 30px -10px rgba(255, 255, 255, 0.3)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg flex items-center space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-2xl"
+                className="bg-white text-pink-600 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg flex items-center justify-center space-x-2 md:space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-2xl w-full sm:w-auto"
               >
                 <span>Стать следующим успешным клиентом</span>
-                <TrendingUp className="w-5 h-5" />
+                <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />
               </motion.button>
             </motion.div>
           </div>
 
           {/* Правая часть - Изображения */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-6 relative z-10">
+          <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 relative z-10">
               {/* Первое изображение - Деньги и коробки */}
               <motion.div
                 variants={imageVariants}
@@ -290,25 +290,25 @@ const SuccessCases = () => {
                 <motion.div
                   variants={floatVariants}
                   animate="float"
-                  className="bg-gray-900 rounded-2xl p-6 h-80 flex flex-col justify-end relative overflow-hidden shadow-2xl"
+                  className="bg-gray-900 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 flex flex-col justify-end relative overflow-hidden shadow-2xl"
                 >
                   {/* Декоративные элементы */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                   
                   {/* Коробки */}
-                  <div className="relative z-10 space-y-3">
-                    <div className="flex space-x-2">
-                      <div className="w-16 h-12 bg-amber-500 rounded-lg transform rotate-12 shadow-lg" />
-                      <div className="w-14 h-10 bg-amber-400 rounded-lg transform -rotate-6 shadow-lg" />
-                      <div className="w-12 h-8 bg-amber-300 rounded-lg transform rotate-6 shadow-lg" />
+                  <div className="relative z-10 space-y-2 md:space-y-3">
+                    <div className="flex space-x-1 md:space-x-2">
+                      <div className="w-12 h-8 md:w-16 md:h-12 bg-pink-500 rounded-lg transform rotate-12 shadow-lg" />
+                      <div className="w-10 h-6 md:w-14 md:h-10 bg-pink-400 rounded-lg transform -rotate-6 shadow-lg" />
+                      <div className="w-8 h-5 md:w-12 md:h-8 bg-pink-300 rounded-lg transform rotate-6 shadow-lg" />
                     </div>
                     
                     {/* Деньги */}
                     <div className="flex space-x-1">
-                      <div className="w-8 h-4 bg-green-400 rounded transform rotate-3" />
-                      <div className="w-10 h-4 bg-green-500 rounded transform -rotate-2" />
-                      <div className="w-7 h-4 bg-green-600 rounded transform rotate-1" />
-                      <div className="w-9 h-4 bg-green-400 rounded transform -rotate-3" />
+                      <div className="w-6 h-3 md:w-8 md:h-4 bg-purple-400 rounded transform rotate-3" />
+                      <div className="w-7 h-3 md:w-10 md:h-4 bg-purple-500 rounded transform -rotate-2" />
+                      <div className="w-5 h-3 md:w-7 md:h-4 bg-purple-600 rounded transform rotate-1" />
+                      <div className="w-6 h-3 md:w-9 md:h-4 bg-purple-400 rounded transform -rotate-3" />
                     </div>
                   </div>
 
@@ -318,9 +318,9 @@ const SuccessCases = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 1 }}
-                    className="absolute top-6 left-6 z-10"
+                    className="absolute top-4 md:top-6 left-4 md:left-6 z-10"
                   >
-                    <div className="text-white font-semibold text-lg">Прибыль + Доставка</div>
+                    <div className="text-white font-semibold text-sm md:text-lg">Прибыль + Доставка</div>
                   </motion.div>
                 </motion.div>
 
@@ -335,7 +335,7 @@ const SuccessCases = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full opacity-60"
+                  className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-4 h-4 md:w-8 md:h-8 bg-yellow-400 rounded-full opacity-60"
                 />
               </motion.div>
 
@@ -349,32 +349,32 @@ const SuccessCases = () => {
                   variants={floatVariants}
                   animate="float"
                   transition={{ delay: 1 }}
-                  className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 h-80 relative overflow-hidden shadow-2xl"
+                  className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 relative overflow-hidden shadow-2xl"
                 >
                   {/* Интерьер магазина */}
                   <div className="absolute inset-0">
                     {/* Стеллажи */}
-                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gray-200" />
-                    <div className="absolute bottom-16 left-4 right-4 h-1 bg-gray-300" />
+                    <div className="absolute bottom-0 left-0 right-0 h-12 md:h-16 bg-gray-200" />
+                    <div className="absolute bottom-12 md:bottom-16 left-3 md:left-4 right-3 md:right-4 h-0.5 md:h-1 bg-gray-300" />
                     
                     {/* Вешалки с одеждой */}
-                    <div className="absolute top-20 left-6 space-y-3">
-                      <div className="flex space-x-3">
-                        <div className="w-8 h-12 bg-pink-200 rounded" />
-                        <div className="w-8 h-10 bg-blue-200 rounded" />
-                        <div className="w-8 h-14 bg-green-200 rounded" />
+                    <div className="absolute top-16 md:top-20 left-4 md:left-6 space-y-2 md:space-y-3">
+                      <div className="flex space-x-2 md:space-x-3">
+                        <div className="w-6 h-8 md:w-8 md:h-12 bg-pink-200 rounded" />
+                        <div className="w-6 h-6 md:w-8 md:h-10 bg-purple-200 rounded" />
+                        <div className="w-6 h-10 md:w-8 md:h-14 bg-pink-300 rounded" />
                       </div>
                     </div>
                     
                     {/* Кассовая стойка */}
-                    <div className="absolute bottom-4 right-4 w-12 h-8 bg-gray-700 rounded" />
+                    <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-8 h-5 md:w-12 md:h-8 bg-gray-700 rounded" />
                     
                     {/* Товары на полках */}
-                    <div className="absolute bottom-20 left-4 right-4 flex justify-between">
-                      <div className="w-6 h-4 bg-red-300 rounded" />
-                      <div className="w-6 h-4 bg-purple-300 rounded" />
-                      <div className="w-6 h-4 bg-yellow-300 rounded" />
-                      <div className="w-6 h-4 bg-cyan-300 rounded" />
+                    <div className="absolute bottom-16 md:bottom-20 left-3 md:left-4 right-3 md:right-4 flex justify-between">
+                      <div className="w-4 h-2 md:w-6 md:h-4 bg-pink-300 rounded" />
+                      <div className="w-4 h-2 md:w-6 md:h-4 bg-purple-300 rounded" />
+                      <div className="w-4 h-2 md:w-6 md:h-4 bg-yellow-300 rounded" />
+                      <div className="w-4 h-2 md:w-6 md:h-4 bg-cyan-300 rounded" />
                     </div>
                   </div>
 
@@ -384,10 +384,10 @@ const SuccessCases = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 1.3 }}
-                    className="absolute top-6 left-6"
+                    className="absolute top-4 md:top-6 left-4 md:left-6"
                   >
-                    <div className="text-gray-800 font-semibold text-lg">Магазин мечты</div>
-                    <div className="text-gray-600 text-sm">Готовый бизнес под ключ</div>
+                    <div className="text-gray-800 font-semibold text-sm md:text-lg">Магазин мечты</div>
+                    <div className="text-gray-600 text-xs md:text-sm">Готовый бизнес под ключ</div>
                   </motion.div>
                 </motion.div>
 
@@ -402,18 +402,18 @@ const SuccessCases = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-70"
+                  className="absolute -bottom-1 -left-1 md:-bottom-2 md:-left-2 w-3 h-3 md:w-6 md:h-6 bg-purple-400 rounded-full opacity-70"
                 />
               </motion.div>
             </div>
 
-            {/* Соединяющая стрелка */}
+            {/* Соединяющая стрелка - скрыта на мобильных */}
             <motion.div
               initial={{ pathLength: 0, opacity: 0 }}
               whileInView={{ pathLength: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 1.5, duration: 1.5 }}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
             >
               <svg
                 width="200"
@@ -443,7 +443,7 @@ const SuccessCases = () => {
 
       {/* Анимированные частицы */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
             animate={{
@@ -457,7 +457,7 @@ const SuccessCases = () => {
               delay: Math.random() * 2,
               ease: "easeInOut"
             }}
-            className="absolute w-2 h-2 bg-white/30 rounded-full"
+            className="absolute w-1.5 h-1.5 md:w-2 md:h-2 bg-white/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
