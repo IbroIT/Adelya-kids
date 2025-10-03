@@ -56,8 +56,12 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-purple-50 relative overflow-hidden">
-      {/* Анимированный фон */}
+      {/* Анимированный фон - исправлен для адаптива */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Основной градиентный фон */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-pink-50 to-purple-50" />
+        
+        {/* Анимированные элементы */}
         <motion.div
           animate={{
             rotate: 360,
@@ -68,7 +72,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-1/2 -right-1/4 w-1/2 h-1/2 bg-gradient-to-r from-pink-200 to-transparent rounded-full opacity-20 blur-xl"
+          className="absolute -top-1/2 -right-1/4 w-full md:w-1/2 h-1/2 bg-gradient-to-r from-pink-200 to-transparent rounded-full opacity-20 blur-xl"
         />
         <motion.div
           animate={{
@@ -80,8 +84,13 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-1/2 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-purple-200 to-transparent rounded-full opacity-20 blur-xl"
+          className="absolute -bottom-1/2 -left-1/4 w-full md:w-1/2 h-1/2 bg-gradient-to-r from-purple-200 to-transparent rounded-full opacity-20 blur-xl"
         />
+        
+        {/* Дополнительные статические элементы для лучшего покрытия на мобильных */}
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-100 rounded-full opacity-10 blur-2xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-100 rounded-full opacity-10 blur-2xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-pink-100 rounded-full opacity-5 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 pt-20 md:pt-32 pb-16 md:pb-20 relative z-10">

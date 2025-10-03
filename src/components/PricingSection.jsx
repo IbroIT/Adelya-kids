@@ -115,8 +115,12 @@ const PricingSection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Декоративные элементы */}
+      {/* Исправленный фон для адаптива */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Основной градиентный фон */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
+        
+        {/* Анимированные элементы - увеличены для мобильных */}
         <motion.div
           animate={{
             rotate: 360,
@@ -127,7 +131,7 @@ const PricingSection = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-20 -right-20 w-40 h-40 bg-pink-100 rounded-full opacity-30"
+          className="absolute -top-20 -right-20 w-40 h-40 md:w-60 md:h-60 bg-pink-100 rounded-full opacity-30"
         />
         <motion.div
           animate={{
@@ -139,8 +143,13 @@ const PricingSection = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-100 rounded-full opacity-30"
+          className="absolute -bottom-20 -left-20 w-60 h-60 md:w-80 md:h-80 bg-purple-100 rounded-full opacity-30"
         />
+        
+        {/* Дополнительные статические элементы для равномерного покрытия */}
+        <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-pink-50 rounded-full opacity-20" />
+        <div className="absolute bottom-1/3 left-1/3 w-16 h-16 bg-purple-50 rounded-full opacity-20" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gray-100 rounded-full opacity-10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

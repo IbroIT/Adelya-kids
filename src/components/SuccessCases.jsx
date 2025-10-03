@@ -90,9 +90,12 @@ const SuccessCases = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden">
-      {/* Декоративные элементы */}
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+      {/* Единый задний фон для всех устройств */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Основной градиентный фон */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900" />
+        
         {/* Пузырьки фона */}
         <motion.div
           animate={{
@@ -133,6 +136,37 @@ const SuccessCases = () => {
           }}
           className="absolute -top-24 -left-24 w-48 h-48 md:w-64 md:h-64 bg-pink-400/20 rounded-full"
         />
+
+        {/* Дополнительные градиентные элементы для лучшего заполнения */}
+        <motion.div
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 right-10 w-40 h-40 md:w-56 md:h-56 bg-purple-500/15 rounded-full blur-2xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+          className="absolute bottom-10 left-10 w-28 h-28 md:w-36 md:h-36 bg-violet-400/20 rounded-full blur-xl"
+        />
+        
+        {/* Дополнительные градиенты для единообразия */}
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -144,7 +178,7 @@ const SuccessCases = () => {
           className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           {/* Левая часть - Текст */}
-          <div className="text-black order-2 lg:order-1">
+          <div className="text-white order-2 lg:order-1">
             {/* Заголовок с декоративным элементом */}
             <motion.div
               variants={itemVariants}
@@ -169,7 +203,7 @@ const SuccessCases = () => {
                       ease: "easeInOut",
                       delay: 0.3
                     }}
-                    className="bg-gradient-to-r from-black to-gray-400 bg-clip-text text-transparent bg-[length:200%_auto]"
+                    className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent bg-[length:200%_auto]"
                   >
                     более 3000 клиентам
                   </motion.span>
@@ -203,7 +237,7 @@ const SuccessCases = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="text-lg md:text-xl lg:text-2xl text-black/90 leading-relaxed font-light max-w-2xl"
+                className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-light max-w-2xl"
               >
                 Мы понимаем, что для вас важно заработать с продажи товара,
                 поэтому внимательно относимся к его подбору
@@ -224,7 +258,7 @@ const SuccessCases = () => {
                     scale: 1.05,
                     y: -5
                   }}
-                  className="text-center p-3 md:p-4 rounded-xl md:rounded-2xl bg-pink-500 backdrop-blur-sm border border-pink-800/20 hover:bg-pink-400 transition-all duration-300"
+                  className="text-center p-3 md:p-4 rounded-xl md:rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -271,7 +305,7 @@ const SuccessCases = () => {
                   boxShadow: "0 10px 30px -10px rgba(255, 255, 255, 0.3)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-pink-600 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg flex items-center justify-center space-x-2 md:space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-2xl w-full sm:w-auto"
+                className="bg-white text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg flex items-center justify-center space-x-2 md:space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-2xl w-full sm:w-auto"
               >
                 <span>Стать следующим успешным клиентом</span>
                 <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />
@@ -290,7 +324,7 @@ const SuccessCases = () => {
                 <motion.div
                   variants={floatVariants}
                   animate="float"
-                  className="bg-gray-900 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 flex flex-col justify-end relative overflow-hidden shadow-2xl"
+                  className="bg-gray-900 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 flex flex-col justify-end relative overflow-hidden shadow-2xl border border-white/10"
                 >
                   {/* Декоративные элементы */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -349,7 +383,7 @@ const SuccessCases = () => {
                   variants={floatVariants}
                   animate="float"
                   transition={{ delay: 1 }}
-                  className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 relative overflow-hidden shadow-2xl"
+                  className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 h-60 md:h-80 relative overflow-hidden shadow-2xl border border-white/10"
                 >
                   {/* Интерьер магазина */}
                   <div className="absolute inset-0">

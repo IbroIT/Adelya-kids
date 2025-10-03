@@ -75,9 +75,13 @@ const WhyKyrgyzstan = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden">
-      {/* Декоративные элементы фона */}
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-white via-pink-50 to-purple-100">
+      {/* Единый задний фон для всех устройств */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Основной градиентный фон */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-pink-50 to-purple-100" />
+        
+        {/* Декоративные элементы */}
         <motion.div
           animate={{
             rotate: 360,
@@ -101,6 +105,32 @@ const WhyKyrgyzstan = () => {
             ease: "linear"
           }}
           className="absolute -bottom-20 -left-20 w-48 h-48 md:w-60 md:h-60 bg-purple-200 rounded-full opacity-30"
+        />
+        
+        {/* Дополнительные декоративные элементы для лучшего заполнения пространства */}
+        <motion.div
+          animate={{
+            rotate: 180,
+            scale: [0.8, 1, 0.8]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/4 left-10 w-20 h-20 md:w-28 md:h-28 bg-pink-100 rounded-full opacity-40"
+        />
+        <motion.div
+          animate={{
+            rotate: -180,
+            scale: [1, 0.9, 1]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-1/4 right-8 w-16 h-16 md:w-24 md:h-24 bg-purple-100 rounded-full opacity-40"
         />
       </div>
 

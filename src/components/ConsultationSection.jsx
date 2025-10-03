@@ -93,8 +93,11 @@ const ConsultationSection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-pink-500 to-rose-600 relative overflow-hidden">
-      {/* Декоративные элементы фона */}
+      {/* Исправленный фон для адаптива */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Основной градиентный фон */}
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-rose-600" />
+        
         {/* Органические линии */}
         <motion.svg
           className="absolute top-0 left-0 w-full h-full opacity-10"
@@ -130,7 +133,7 @@ const ConsultationSection = () => {
           />
         </motion.svg>
 
-        {/* Плавающие элементы */}
+        {/* Плавающие элементы - увеличены для мобильных */}
         <motion.div
           animate={{
             y: [-20, 20, -20],
@@ -141,7 +144,7 @@ const ConsultationSection = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-20 left-10 w-8 h-8 bg-white/20 rounded-full"
+          className="absolute top-20 left-10 w-8 h-8 md:w-12 md:h-12 bg-white/20 rounded-full"
         />
         <motion.div
           animate={{
@@ -154,7 +157,7 @@ const ConsultationSection = () => {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute bottom-20 right-16 w-6 h-6 bg-white/15 rounded-full"
+          className="absolute bottom-20 right-16 w-6 h-6 md:w-10 md:h-10 bg-white/15 rounded-full"
         />
         <motion.div
           animate={{
@@ -167,7 +170,39 @@ const ConsultationSection = () => {
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute top-1/2 left-1/4 w-4 h-4 bg-white/25 rounded-full"
+          className="absolute top-1/2 left-1/4 w-4 h-4 md:w-8 md:h-8 bg-white/25 rounded-full"
+        />
+        
+        {/* Дополнительные статические элементы для равномерного покрытия */}
+        <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-white/10 rounded-full opacity-30" />
+        <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-white/15 rounded-full opacity-25" />
+        <div className="absolute top-3/4 right-1/3 w-20 h-20 bg-white/5 rounded-full opacity-20" />
+        
+        {/* Большие фоновые элементы для мобильных */}
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.15, 0.1]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute -top-20 -left-20 w-60 h-60 md:w-80 md:h-80 bg-white/10 rounded-full"
+        />
+        <motion.div
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.15, 0.1, 0.15]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 5
+          }}
+          className="absolute -bottom-20 -right-20 w-80 h-80 md:w-96 md:h-96 bg-white/5 rounded-full"
         />
       </div>
 
@@ -205,7 +240,7 @@ const ConsultationSection = () => {
           {/* Форма */}
           <motion.div
             variants={formVariants}
-            className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl"
+            className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-2xl"
           >
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
@@ -352,15 +387,15 @@ const ConsultationSection = () => {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="text-center py-12"
+                  className="text-center py-8 md:py-12"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring" }}
-                    className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                    className="w-16 h-16 md:w-20 md:h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6"
                   >
-                    <CheckCircle className="w-10 h-10 text-pink-500" />
+                    <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-pink-500" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Заявка отправлена!
@@ -385,7 +420,7 @@ const ConsultationSection = () => {
           {/* Дополнительные преимущества */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-3 gap-8 mt-12"
+            className="grid md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12"
           >
             {[
               {
@@ -411,12 +446,12 @@ const ConsultationSection = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4"
+                  className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4"
                 >
-                  <item.icon className="w-6 h-6 text-white" />
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </motion.div>
-                <h4 className="font-semibold mb-2">{item.title}</h4>
-                <p className="text-white/80 text-sm">{item.description}</p>
+                <h4 className="font-semibold mb-2 text-sm md:text-base">{item.title}</h4>
+                <p className="text-white/80 text-xs md:text-sm">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
