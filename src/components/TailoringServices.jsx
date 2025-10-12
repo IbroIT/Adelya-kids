@@ -79,7 +79,7 @@ const TailoringServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-pink-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div id='sewing' className="min-h-screen bg-gradient-to-br from-white to-pink-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Заголовок и вводная информация */}
@@ -231,53 +231,6 @@ const TailoringServices = () => {
                 ))}
               </ul>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">
-                Рассчитать стоимость
-              </h4>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Тип одежды
-                  </label>
-                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent">
-                    <option>Детская одежда</option>
-                    <option>Мужская одежда</option>
-                    <option>Женская одежда</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Количество (шт.)
-                  </label>
-                  <input 
-                    type="number" 
-                    min="500"
-                    defaultValue="500"
-                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  />
-                </div>
-                <button className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
-                  Получить расчёт
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Финальный CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12 text-white shadow-2xl">
-            <h3 className="text-3xl font-bold mb-4">
-              Готовы начать сотрудничество?
-            </h3>
-            <p className="text-pink-100 mb-8 text-lg">
-              Оставьте заявку и получите бесплатную консультацию нашего специалиста
-            </p>
-            <button className="bg-white hover:bg-gray-100 text-pink-600 font-bold py-4 px-12 rounded-2xl transform hover:scale-105 transition-all duration-300">
-              Обсудить проект
-            </button>
           </div>
         </div>
       </div>

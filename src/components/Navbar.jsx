@@ -41,12 +41,12 @@ const Navbar = () => {
     },
     { 
       name: 'Отзывы', 
-      href: '#reviews',
+      href: '#feedback',
       icon: Users
     },
     { 
       name: 'Контакты', 
-      href: '#contacts',
+      href: '#contact',
       icon: Star
     },
   ];

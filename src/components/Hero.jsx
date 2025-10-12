@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Scissors, Shirt, Star } from 'lucide-react';
-
+import HeroImg from '../assets/hero_img.jpg'
 const Hero = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -213,15 +213,7 @@ const Hero = () => {
                   transition={{ delay: 0.8, duration: 0.8 }}
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gradient-to-br from-pink-100 to-purple-100 rounded-3xl shadow-2xl overflow-hidden"
                 >
-                  {/* Заглушка для изображения */}
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    <div className="text-center">
-                      <div className="w-20 h-20 md:w-32 md:h-32 bg-pink-200 rounded-full mx-auto mb-3 md:mb-4 flex items-center justify-center">
-                        <span className="text-2xl md:text-4xl">👧</span>
-                      </div>
-                      <p className="text-sm md:text-base">Фото девочки в стильной одежде</p>
-                    </div>
-                  </div>
+                  <img src={HeroImg} alt="" />
                 </motion.div>
                 
                 {/* Декоративные элементы */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, TrendingUp, RefreshCw, Sparkles } from 'lucide-react';
-
+import Img from '../assets/2.jpg'
 const FashionTrendPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -121,6 +121,7 @@ const FashionTrendPage = () => {
             
             {/* Основное изображение */}
             <div className="relative">
+              
               {/* Декоративный фон */}
               <div className="absolute -inset-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl transform rotate-2" />
               <div className="absolute -inset-8 bg-gradient-to-br from-pink-50 to-purple-100 rounded-3xl transform -rotate-1" />
@@ -131,22 +132,12 @@ const FashionTrendPage = () => {
                   imageLoaded ? 'opacity-100' : 'opacity-0'
                 }`}>
                   
-                  {/* Placeholder с анимацией загрузки */}
-                  {!imageLoaded && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-pink-600" />
-                    </div>
-                  )}
                   
                   {/* Имитация изображения с журналом CORREY */}
                   <div className="absolute inset-0 flex items-center justify-center p-8">
                     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
                       
-                      {/* Обложка журнала */}
-                      <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white p-6 rounded-t-2xl">
-                        <div className="text-2xl font-bold tracking-widest">CORREY</div>
-                        <div className="text-sm text-pink-100 mt-1">Spring Collection 2024</div>
-                      </div>
+
                       
                       {/* Содержимое журнала */}
                       <div className="p-6">

@@ -44,7 +44,7 @@ const ContactCTA = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-r from-pink-500 to-purple-600 overflow-hidden py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+    <section id='contact' className="relative bg-gradient-to-r from-pink-500 to-purple-600 overflow-hidden py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
       
       {/* Декоративные органические линии - скрыты на мобильных */}
       <div className="absolute inset-0 pointer-events-none hidden md:block">
