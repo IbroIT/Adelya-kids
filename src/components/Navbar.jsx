@@ -189,7 +189,7 @@ const Navbar = () => {
                     }`}
                     whileHover={{ scale: 1.1 }}
                   >
-                    Dk
+                    Adelya kids
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}

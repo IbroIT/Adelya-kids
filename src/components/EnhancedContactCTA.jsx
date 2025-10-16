@@ -208,7 +208,7 @@ const ContactCTA = () => {
 // Дополнительный компонент для улучшения доступности
 const AccessibilityOverlay = () => (
   <div className="sr-only">
-    <h1>Контактная информация Dordoykids</h1>
+    <h1>Контактная информация Adelya kids</h1>
     <p>Свяжитесь с нами через мессенджеры: WhatsApp, Telegram, Instagram</p>
     <p>Телефон: +996 773 988 444</p>
     <p>Компания: Dordoykids - Байерская компания в Бишкеке</p>
