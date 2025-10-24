@@ -54,7 +54,7 @@ const Navbar = () => {
   const socialIcons = [
     { 
       icon: MessageCircle, 
-      href: 'https://wa.me/996773988444', 
+      href: '#', 
       color: 'text-pink-500',
       hoverColor: 'text-pink-600',
       bgColor: 'bg-pink-50',
@@ -62,7 +62,7 @@ const Navbar = () => {
     },
     { 
       icon: Instagram, 
-      href: 'https://instagram.com/dordoykids', 
+      href: '#', 
       color: 'text-pink-500',
       hoverColor: 'text-pink-600',
       bgColor: 'bg-pink-50',
@@ -70,7 +70,7 @@ const Navbar = () => {
     },
     { 
       icon: 'Telegram', 
-      href: 'https://t.me/dordoykids', 
+      href: '#', 
       color: 'text-pink-500',
       hoverColor: 'text-pink-600',
       bgColor: 'bg-pink-50',

@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import sewingMachine from '/src/assets/sewing-machine-svgrepo-com.svg';
 
+import tailoringImage from '../assets/photo.jpg';
+
 const TailoringServices = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -209,8 +211,8 @@ const TailoringServices = () => {
           </div>
         </div>
 
-        {/* Дополнительная информация */}
-        <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 shadow-lg">
+        {/* Дополнительная информация с фотографией */}
+        <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -230,6 +232,24 @@ const TailoringServices = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+            
+            {/* Фотография */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <img 
+                  src={tailoringImage} 
+                  alt="Наше швейное производство" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <p className="text-white font-medium text-lg">Современное швейное оборудование</p>
+                </div>
+              </div>
+              
+              {/* Декоративный элемент */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-pink-500 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-500 rounded-full opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>

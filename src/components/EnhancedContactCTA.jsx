@@ -21,7 +21,7 @@ const ContactCTA = () => {
       id: 1,
       platform: 'WhatsApp',
       icon: MessageCircle,
-      url: 'https://wa.me/996773988444',
+      url: '#',
       color: '#25D366',
       description: 'Быстрые ответы'
     },
@@ -29,7 +29,7 @@ const ContactCTA = () => {
       id: 2,
       platform: 'Telegram',
       icon: Send,
-      url: 'https://t.me/dordoykids',
+      url: '#',
       color: '#0088cc',
       description: 'Мгновенные сообщения'
     },
@@ -37,7 +37,7 @@ const ContactCTA = () => {
       id: 3,
       platform: 'Instagram',
       icon: Instagram,
-      url: 'https://instagram.com/dordoykids',
+      url: '#',
       color: '#E4405F',
       description: 'Прямые сообщения'
     }
@@ -143,7 +143,7 @@ const ContactCTA = () => {
               <span className="text-white font-bold text-sm sm:text-base md:text-lg">Dk</span>
             </div>
             <div className="text-white">
-              <div className="font-bold text-base sm:text-lg md:text-lg">Dordoykids</div>
+              <div className="font-bold text-base sm:text-lg md:text-lg">Adelya kids</div>
               <div className="text-white/80 text-xs sm:text-sm">Байерская компания в Бишкеке</div>
             </div>
           </div>
@@ -211,7 +211,7 @@ const AccessibilityOverlay = () => (
     <h1>Контактная информация Adelya kids</h1>
     <p>Свяжитесь с нами через мессенджеры: WhatsApp, Telegram, Instagram</p>
     <p>Телефон: +996 773 988 444</p>
-    <p>Компания: Dordoykids - Байерская компания в Бишкеке</p>
+    <p>Компания: Adelya kids - Байерская компания в Бишкеке</p>
   </div>
 );
 

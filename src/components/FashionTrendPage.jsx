@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, TrendingUp, RefreshCw, Sparkles } from 'lucide-react';
-import Img from '../assets/2.jpg'
+import Img from '../assets/photo_2025.jpg'
 const FashionTrendPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -114,7 +114,7 @@ const FashionTrendPage = () => {
             </div>
           </div>
 
-          {/* Правая часть - Визуальная часть */}
+          {/* Правая часть - Визуальная часть с фотографией */}
           <div className={`relative transition-all duration-1000 ${
             isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
           }`}>
@@ -126,55 +126,23 @@ const FashionTrendPage = () => {
               <div className="absolute -inset-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl transform rotate-2" />
               <div className="absolute -inset-8 bg-gradient-to-br from-pink-50 to-purple-100 rounded-3xl transform -rotate-1" />
               
-              {/* Контейнер изображения */}
+              {/* Контейнер для фотографии */}
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-700">
-                <div className={`aspect-square bg-gradient-to-br from-gray-100 to-gray-200 transition-all duration-1000 ${
+                <div className={`aspect-square transition-all duration-1000 ${
                   imageLoaded ? 'opacity-100' : 'opacity-0'
                 }`}>
                   
                   
-                  {/* Имитация изображения с журналом CORREY */}
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                      
-
-                      
-                      {/* Содержимое журнала */}
-                      <div className="p-6">
-                        <div className="grid grid-cols-2 gap-4">
-                          {/* Левая страница - футболка */}
-                          <div className="space-y-2">
-                            <div className="bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg aspect-square flex items-center justify-center">
-                              <div className="w-3/4 h-3/4 bg-pink-400 rounded relative">
-                                <div className="absolute top-2 left-2 right-2 h-4 bg-white rounded" />
-                              </div>
-                            </div>
-                            <div className="text-xs text-gray-600">Classic T-Shirt</div>
-                          </div>
-                          
-                          {/* Правая страница - шорты */}
-                          <div className="space-y-2">
-                            <div className="bg-gray-100 rounded-lg aspect-square flex items-center justify-center">
-                              <div className="w-3/4 h-3/4 bg-white border-2 border-gray-300 rounded" />
-                            </div>
-                            <div className="text-xs text-gray-600">Summer Shorts</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Альтернатива: если хотите использовать импортированное изображение */}
                   
-                  {/* Декоративный медвежонок */}
-                  <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full shadow-lg transform -rotate-12">
-                    <div className="absolute inset-2 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full">
-                      {/* Лицо медвежонка */}
-                      <div className="absolute top-4 left-4 right-4 flex justify-between">
-                        <div className="w-2 h-2 bg-gray-800 rounded-full" />
-                        <div className="w-2 h-2 bg-gray-800 rounded-full" />
-                      </div>
-                      <div className="absolute top-8 left-6 right-6 h-1 bg-gray-800 rounded-full" />
-                    </div>
-                  </div>
+                  <img
+                    src={Img} // Используйте импортированную переменную
+                    alt="Fashion trend"
+                    className="w-full h-full object-cover"
+                    onLoad={() => setImageLoaded(true)}
+                  />
+                 
+                  
                 </div>
               </div>
             </div>
