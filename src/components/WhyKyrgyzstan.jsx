@@ -276,23 +276,7 @@ const WhyKyrgyzstan = () => {
               />
             </div>
 
-            {/* CTA Кнопка */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-8 md:mt-12"
-            >
-              <motion.button
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 30px -10px rgba(236, 72, 153, 0.5)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold text-base md:text-lg flex items-center justify-center space-x-2 hover:shadow-xl transition-all duration-300 shadow-lg w-full sm:w-auto"
-              >
-                <span>Перейти в каталог</span>
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-              </motion.button>
-            </motion.div>
+            
           </div>
 
           {/* Правая часть - Преимущества */}

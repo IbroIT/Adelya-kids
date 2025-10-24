@@ -152,7 +152,7 @@ const Hero = () => {
             <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-3 md:gap-4"
-            >
+            ><a href="https://wa.me/996706421414" target="_blank">
               <motion.button
                 whileHover={{ 
                   scale: 1.05,
@@ -164,14 +164,7 @@ const Hero = () => {
                 <span>Начать сотрудничество</span>
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-gray-300 text-gray-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:border-pink-500 hover:text-pink-600 transition-colors"
-              >
-                Смотреть каталог
-              </motion.button>
+              </a>
             </motion.div>
 
             {/* Статистика */}

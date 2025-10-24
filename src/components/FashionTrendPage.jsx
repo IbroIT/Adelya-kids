@@ -76,27 +76,6 @@ const FashionTrendPage = () => {
               ))}
             </div>
 
-            {/* Кнопка CTA */}
-            <div>
-              <button className="group relative bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-5 px-10 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                
-                <div className="relative flex items-center justify-center gap-3">
-                  <span className="text-lg">Перейти в каталог</span>
-                  <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-                
-                {/* Эффект блеска */}
-                <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                  <div className="absolute -inset-10 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:translate-x-40 transition-all duration-1000" />
-                </div>
-              </button>
-              
-              {/* Дополнительная информация под кнопкой */}
-              <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500">
-                <RefreshCw className="w-4 h-4" />
-                <span>Обновление каталога каждые 48 часов</span>
-              </div>
-            </div>
 
             {/* Преимущества */}
             <div className="grid grid-cols-2 gap-4 mt-8">

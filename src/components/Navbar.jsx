@@ -54,28 +54,12 @@ const Navbar = () => {
   const socialIcons = [
     { 
       icon: MessageCircle, 
-      href: '#', 
+      href: 'https://wa.me/996505098340', 
       color: 'text-pink-500',
       hoverColor: 'text-pink-600',
       bgColor: 'bg-pink-50',
       name: 'WhatsApp'
-    },
-    { 
-      icon: Instagram, 
-      href: '#', 
-      color: 'text-pink-500',
-      hoverColor: 'text-pink-600',
-      bgColor: 'bg-pink-50',
-      name: 'Instagram'
-    },
-    { 
-      icon: 'Telegram', 
-      href: '#', 
-      color: 'text-pink-500',
-      hoverColor: 'text-pink-600',
-      bgColor: 'bg-pink-50',
-      name: 'Telegram'
-    },
+    }
   ];
 
   const navbarVariants = {
@@ -314,7 +298,7 @@ const Navbar = () => {
                   }`}
                 >
                   <Phone className="w-4 h-4 relative z-10" />
-                  <span className="relative z-10">+996 773 988 444</span>
+                  <span className="relative z-10">+996505098340</span>
                 </motion.a>
                 
                 <motion.div
@@ -488,7 +472,7 @@ const Navbar = () => {
                     >
                       <div className="flex items-center justify-center space-x-2">
                         <Phone className="w-5 h-5" />
-                        <span>+996 773 988 444</span>
+                        <span>+996505098340</span>
                       </div>
                     </motion.a>
                     <p className="text-sm text-gray-600">

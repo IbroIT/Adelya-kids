@@ -328,63 +328,9 @@ const PricingSection = () => {
           </div>
         </motion.div>
 
-        {/* Пояснительная информация */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 border border-pink-200"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                💡 Выгодные условия для крупных заказов
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Наша система комиссий разработана таким образом, чтобы стимулировать 
-                рост вашего бизнеса. Чем больше сумма заказа — тем ниже процентная ставка, 
-                что делает сотрудничество максимально выгодным при масштабировании.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-pink-50 rounded-lg">
-                  <span className="text-gray-700">Малые заказы</span>
-                  <span className="font-bold text-pink-600">Фиксированная ставка</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
-                  <span className="text-gray-700">Крупные заказы</span>
-                  <span className="font-bold text-purple-600">Сниженный процент</span>
-                </div>
-                <div className="text-center text-sm text-gray-600 mt-4">
-                  📈 Экономия до 25% при заказах от 300 000 KGS
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        
 
-        {/* CTA секция */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <motion.button
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px -10px rgba(236, 72, 153, 0.5)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-pink-600 transition-all duration-300 shadow-lg"
-          >
-            Рассчитать стоимость моего заказа
-          </motion.button>
-          <p className="text-gray-600 mt-4">
-            Получите точный расчет комиссии для вашей суммы заказа
-          </p>
-        </motion.div>
+        
       </div>
     </section>
   );

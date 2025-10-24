@@ -21,25 +21,9 @@ const ContactCTA = () => {
       id: 1,
       platform: 'WhatsApp',
       icon: MessageCircle,
-      url: '#',
+      url: 'https://wa.me/996505098340',
       color: '#25D366',
       description: 'Быстрые ответы'
-    },
-    {
-      id: 2,
-      platform: 'Telegram',
-      icon: Send,
-      url: '#',
-      color: '#0088cc',
-      description: 'Мгновенные сообщения'
-    },
-    {
-      id: 3,
-      platform: 'Instagram',
-      icon: Instagram,
-      url: '#',
-      color: '#E4405F',
-      description: 'Прямые сообщения'
     }
   ];
 
@@ -148,27 +132,16 @@ const ContactCTA = () => {
             </div>
           </div>
 
-          {/* Политика конфиденциальности по центру */}
-          <div className="mb-4 md:mb-0 order-1 md:order-2">
-            <a 
-              href="/privacy" 
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 text-sm sm:text-base"
-            >
-              <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="whitespace-nowrap">Политика конфиденциальности</span>
-            </a>
-          </div>
-
           {/* Телефон и консультация справа */}
           <div className="text-center md:text-right order-3">
             <a 
-              href="tel:+996773988444" 
+              href="tel:+996505098340" 
               className="text-white font-semibold text-base sm:text-lg hover:text-white/80 transition-colors duration-300 block mb-1 sm:mb-2 whitespace-nowrap"
             >
-              +996 773 988 444
+              +996505098340
             </a>
             <a 
-              href="/consultation" 
+              href="tel:+996505098340" 
               className="text-white/80 hover:text-white transition-colors duration-300 underline underline-offset-4 flex items-center gap-2 justify-center md:justify-end text-sm sm:text-base"
             >
               <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -210,7 +183,7 @@ const AccessibilityOverlay = () => (
   <div className="sr-only">
     <h1>Контактная информация Adelya kids</h1>
     <p>Свяжитесь с нами через мессенджеры: WhatsApp, Telegram, Instagram</p>
-    <p>Телефон: +996 773 988 444</p>
+    <p>Телефон: +996505098340</p>
     <p>Компания: Adelya kids - Байерская компания в Бишкеке</p>
   </div>
 );

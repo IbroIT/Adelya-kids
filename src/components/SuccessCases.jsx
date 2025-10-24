@@ -298,7 +298,7 @@ const SuccessCases = () => {
             {/* CTA Кнопка */}
             <motion.div
               variants={itemVariants}
-            >
+            ><a href="https://wa.me/996706421414">
               <motion.button
                 whileHover={{ 
                   scale: 1.05,
@@ -309,7 +309,7 @@ const SuccessCases = () => {
               >
                 <span>Стать следующим успешным клиентом</span>
                 <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />
-              </motion.button>
+              </motion.button></a>
             </motion.div>
           </div>
 

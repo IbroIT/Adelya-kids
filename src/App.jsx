@@ -21,7 +21,7 @@ function App() {
       <EpicProductPage />    
       <FashionTrendPage />    
       <PricingSection />    
-      <ConsultationSection />    
+      {/* <ConsultationSection />     */}
       <TailoringServices />    
       <EpicFAQSection />    
       <EnhancedContactCTA />    

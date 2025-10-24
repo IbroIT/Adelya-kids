@@ -108,7 +108,7 @@ const TailoringServices = () => {
                 </div>
               </div>
             </div>
-
+<a href="https://wa.me/996706421414">
             {/* Кнопка CTA */}
             <button className="group bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12">
               <div className="flex items-center gap-3">
@@ -116,6 +116,7 @@ const TailoringServices = () => {
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </button>
+            </a>
           </div>
         </div>
 

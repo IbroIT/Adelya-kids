@@ -28,12 +28,6 @@ const EpicFAQSection = () => {
       answer: "Полный каталог товаров доступен в нашем мобильном приложении, на сайте в разделе 'Каталог', а также мы можем отправить вам актуальный прайс-лист по запросу.",
       icon: "📱",
       color: "from-purple-500 to-pink-500"
-    },
-    {
-      question: "Где вы находитесь?",
-      answer: "Наш главный офис и шоурум расположены по адресу: Москва, ул. Тверская, д. 10. Также есть пункты выдачи в 25 городах России.",
-      icon: "📍",
-      color: "from-red-500 to-rose-500"
     }
   ];
 
@@ -200,32 +194,6 @@ const EpicFAQSection = () => {
               </AnimatePresence>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* CTA Блок */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-8 shadow-2xl">
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-              Не нашли ответ на свой вопрос?
-            </h3>
-            <p className="text-pink-100 text-lg mb-6">
-              Наша команда поддержки готова помочь вам 24/7
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-pink-600 px-8 py-3 rounded-2xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                📞 Позвонить нам
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold hover:bg-white hover:text-pink-600 transform hover:scale-105 transition-all duration-300">
-                💬 Написать в чат
-              </button>
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>
